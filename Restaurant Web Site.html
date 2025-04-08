@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurant Web Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header başlangıç -->
+  <header class="header">
+    <a href="#" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+    <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Products</a>
+        <a href="#">Review</a>
+        <a href="#">Contact</a>
+        <a href="#">Blogs</a>
+    
+    </nav>
+    <div class="buttons">
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+      <button>
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <button>
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  <!-- header alanı bitiş -->
+   <!-- home alanı başlangıç -->
+    <section class="home">
+        <div class="content">
+            <h3>EXPRESS HOME DELİVERY</h3>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut adipisci pariatur quo,  laudantium eveniet maiores! Alias unde ut, optio ad iste sit dolor. Dicta sapiente cumque suscipit, vel iusto molestias minus nemo?
+        </P>
+        <a href="#" class="btn">Oreder New</a>
+        </div>
+    </section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
